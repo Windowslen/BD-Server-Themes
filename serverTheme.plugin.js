@@ -6,13 +6,13 @@ serverTheme.prototype.getName = function(){
     return 'Server Specific Themes';
 };
 serverTheme.prototype.getDescription = function(){
-    return 'Ability to use specific themes on individual servers.';
+    return 'Ability to use specific themes on individual servers.\n Base DeNial.\n Fork by Kaznaami';
 };
 serverTheme.prototype.getVersion = function(){
-    return '1.0.0';
+    return '1.1 beta';
 };
 serverTheme.prototype.getAuthor = function(){
-    return '<a href="https://github.com/IRDeNial" target="_BLANK">DeNial</a>';
+    return 'Created by DeNial. Fork By Kazanami';
 };
 
 serverTheme.prototype.load = function(){
