@@ -9,7 +9,7 @@ serverTheme.prototype.getDescription = function(){
     return 'Ability to use specific themes on individual servers.';
 };
 serverTheme.prototype.getVersion = function(){
-    return '1.1.0 beta';
+    return '1.1.0 stable';
 };
 serverTheme.prototype.getAuthor = function(){
     return 'Created By IRDeNial. Fork By Kazanami';

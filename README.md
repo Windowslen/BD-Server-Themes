@@ -28,6 +28,8 @@ THIS WILL ONLY WORK FOR BETTER DISCORD USERS
 ## Contributors
 * [IRDeNial](https://github.com/IRDeNial/)
 
+* [Kazanami](https://github.com/Windowslen)
+
 ## Contribution Guidelines
 * Document **ALL** code contributions
   * Anything undocumented will be ignored until full documentation is provided
