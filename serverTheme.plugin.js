@@ -9,10 +9,10 @@ serverTheme.prototype.getDescription = function(){
     return 'Ability to use specific themes on individual servers.';
 };
 serverTheme.prototype.getVersion = function(){
-    return '1.0.0';
+    return '1.1.0 beta';
 };
 serverTheme.prototype.getAuthor = function(){
-    return 'https://github.com/IRDeNial';
+    return 'Created by IRDeNial. Fork By Kazanami';
 };
 
 serverTheme.prototype.load = function(){
