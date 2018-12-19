@@ -12,7 +12,11 @@ serverTheme.prototype.getVersion = function(){
     return '1.1.0 beta';
 };
 serverTheme.prototype.getAuthor = function(){
+<<<<<<< HEAD
     return 'Created By IRDeNial. Fork By Kazanami';
+=======
+    return 'IRDeNial';
+>>>>>>> master
 };
 
 serverTheme.prototype.load = function(){

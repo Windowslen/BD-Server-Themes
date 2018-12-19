@@ -10,16 +10,6 @@ THIS WILL ONLY WORK FOR BETTER DISCORD USERS
 4. Restart BetterDiscord
 
 ## How to create themes
-There are two ways to create themes.
-
-#### Method #1:
-1. In discord, join the server that you want to create a theme for.
-2. Click on the **"BetterDiscord"** menu (Where the hamburger icon is, top left)
-3. Click **"Server CSS"**.  This should open the server CSS file with your default text editor.
-4. Save
-5. Rejoin the server
-
-#### Method #2:
 1. In Discord, open your settings, go to Appearance, and enable **Developer Mode**.
 2. In Discord, right click on the server that you want to create a theme for.  Then click **"Copy ID"**.  This will give you the server ID.
     * This will be referred to as {{ServerID}}.
@@ -29,8 +19,6 @@ There are two ways to create themes.
 6. Rejoin the server
 
 ## Images
-![https://share.md5.xyz/Akk1470196489AZ1.png](https://share.md5.xyz/Akk1470196489AZ1.png)
-
 ![https://share.md5.xyz/LNs14701940579Da.gif](https://share.md5.xyz/LNs14701940579Da.gif)
 
 ## To Do List
