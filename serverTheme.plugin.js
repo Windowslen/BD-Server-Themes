@@ -12,18 +12,18 @@ serverTheme.prototype.getVersion = function(){
     return '1.1.0 beta';
 };
 serverTheme.prototype.getAuthor = function(){
-    return 'Created by IRDeNial. Fork By Kazanami';
+    return 'Created By IRDeNial. Fork By Kazanami';
 };
 
 serverTheme.prototype.load = function(){
     /* Variables */
-    os_select = navigator.platform; // OS Select
-
-    if ( os_select.match(/Linux/) ){
-        this.themePath = process.env.HOME + "/.config/BetterDiscord/themes/"; //OS:Linux
-    }elif (os_select.match(/Win/) ) {
-        this.themePath = process.env.APPDATA + "\\BetterDiscord\\themes\\"; //OS:Windows
-    }    
+	var os_select = navigator.platform; // OS Select
+	if ( os_select.match (/Linux/) ) {
+	    this.themePath = process.env.HOME + "/.config/BetterDiscord/themes/"; //OS:Linux
+	}else if ( os_select.match (/Win/) ) {
+	    this.themePath = process.env.APPDATA + "\\BetterDiscord\\themes\\"; //OS:Windows
+	}
+//    this.themePath = process.env.APPDATA + "\\BetterDiscord\\themes\\";
     this.loaded = false;
     this.bdIsLoaded = false;
 
@@ -39,7 +39,7 @@ serverTheme.prototype.load = function(){
         var serverHash = null;
         try {
             //serverHash = $('.guild.selected a,.guild.active a').attr('href').split('/')[2];
-            serverHash = window.location.href.split('/')[4]; // Hash Patched
+            serverHash = window.location.href.split('/')[4];
         } catch(e) {
             console.log("Failed to get server hash");
         }
@@ -89,13 +89,13 @@ serverTheme.prototype.load = function(){
             $('.guild-header ul .server-css').on('click.serverCSS',function(){
 //                var filePath = process.env.APPDATA + "\\BetterDiscord\\themes\\" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css';
 		  //var filePath = process.env.HOME + '/.config/BetterDiscord/themes/' + serverHash + '.servertheme.css';
-        // OS File Path 
-        if ( os_select.match(/Linux/) ){
-            var filePath = process.env.HOME + "/.config/BetterDiscord/themes/" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css'; //OS:Linux
-        }elif (os_select.match(/Win/) ) {
-            var filePath = process.env.APPDATA + "\\BetterDiscord\\themes\\" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css'; //OS:Windows
-        }    
-        //var filePath = process.env.HOME + "/.config/BetterDiscord/themes/" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css';
+	if ( os_select.match (/Linux/) ) {
+	    var filePath = process.env.HOME + "/.config/BetterDiscord/themes/" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css'; //OS:Linux
+	}else if ( os_select.match (/Win/) ) {
+	    var filePath = process.env.APPDATA + "\\BetterDiscord\\themes\\" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css'; //OS:Windows
+	}
+
+		//var filePath = process.env.HOME + "/.config/BetterDiscord/themes/" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css';
                 console.log(filePath);
                 try {
                     require('fs').accessSync(filePath);
