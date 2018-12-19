@@ -6,18 +6,19 @@ serverTheme.prototype.getName = function(){
     return 'Server Specific Themes';
 };
 serverTheme.prototype.getDescription = function(){
-    return 'Ability to use specific themes on individual servers.\n Base DeNial.\n Fork by Kaznaami';
+    return 'Ability to use specific themes on individual servers.';
 };
 serverTheme.prototype.getVersion = function(){
-    return '1.1 beta';
+    return '1.0.0';
 };
 serverTheme.prototype.getAuthor = function(){
-    return 'Created by DeNial. Fork By Kazanami';
+    return 'https://github.com/IRDeNial';
 };
 
 serverTheme.prototype.load = function(){
     /* Variables */
-    this.themePath = process.env.APPDATA + "\\BetterDiscord\\themes\\";
+    this.themePath = process.env.HOME + "/.config/BetterDiscord/themes/";
+//    this.themePath = process.env.APPDATA + "\\BetterDiscord\\themes\\";
     this.loaded = false;
     this.bdIsLoaded = false;
 
@@ -25,12 +26,15 @@ serverTheme.prototype.load = function(){
     this.loadServerCSS = function(serverHash) {
         this.getFileContent(this.themePath + serverHash+'.servertheme.css',this.injectCSS);
         console.log("Injected theme for server " + serverHash);
+	console.log(this.themePath + serverHash+'.servertheme.css');
+//        console.log("Injected theme for server " + getFileContent);
         $('#serverTheme-css').addClass('theme-'+serverHash);
     };
     this.getCurrentServerHash = function() {
         var serverHash = null;
         try {
-            serverHash = $('.guild.selected a,.guild.active a').attr('href').split('/')[2];
+            //serverHash = $('.guild.selected a,.guild.active a').attr('href').split('/')[2];
+            serverHash = window.location.href.split('/')[4];
         } catch(e) {
             console.log("Failed to get server hash");
         }
@@ -78,8 +82,10 @@ serverTheme.prototype.load = function(){
             $('.guild-header ul').prepend('<li><a class="server-css">Server CSS</a></li>');
 
             $('.guild-header ul .server-css').on('click.serverCSS',function(){
-                var filePath = process.env.APPDATA + "\\BetterDiscord\\themes\\" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css';
-                
+//                var filePath = process.env.APPDATA + "\\BetterDiscord\\themes\\" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css';
+		  //var filePath = process.env.HOME + '/.config/BetterDiscord/themes/' + serverHash + '.servertheme.css';
+		var filePath = process.env.HOME + "/.config/BetterDiscord/themes/" + $('.guild.selected a').attr('href').split('/')[2] + '.servertheme.css';
+                console.log(filePath);
                 try {
                     require('fs').accessSync(filePath);
                 } catch(e) {
